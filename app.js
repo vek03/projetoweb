@@ -1,6 +1,6 @@
 const express = require("express")
 const bodyParser = require('body-parser')
-var Agendamento = require(__dirname + '/server/banco.js')
+var Agendamento = require(__dirname + '/models/Agendamento.js')
 const handlebars = require("express-handlebars").engine
 
 //Iniciando Bibliotecas
@@ -28,10 +28,10 @@ app.get("/", function(req, res){
     res.render("index")
 })
 
-app.post("/cadastrar/agendamento", async (req, res) => {
+app.post("/cadastrar", async (req, res) => {
     Agendamento.create(req.body)
 
-    res.redirect('/listar/agendamentos');
+    res.redirect('/consultar');
 })
 
 
