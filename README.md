@@ -1,5 +1,6 @@
 Iniciando projeto:
 
+(SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
 - git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
 - cd <projeto>
 - npm i
