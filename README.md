@@ -57,7 +57,9 @@ git push
 
 # PUXANDO AS ALTERAÇÕES DA BRANCH DE HOMOLOGAÇÃO
 Caso o projeto já exista na sua máquina e outra pessoa tiver feito alterações antes de você, execute:
-- git pull https://github.com/vek03/aula-handlebar-nodejs homologacao
+```
+git pull https://github.com/vek03/aula-handlebar-nodejs homologacao
+```
 
 <br><br><br>
 
