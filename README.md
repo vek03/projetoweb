@@ -1,3 +1,13 @@
+#ETAPAS
+O projeto ainda está em desenvolvimento:
+
+- [x] Estrutura
+- [ ] Front-End
+- [ ] Create
+- [ ] Read
+- [ ] Update
+- [ ] Delete
+
 <h1>INICIANDO PROJETO</h1>
 <h3>(SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)</h3>
 - git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
