@@ -6,7 +6,7 @@
 - npm run start
 - htttp://localhost:8081
 
-<br>
+<br><br>
 
 <h1>EXPLICAÇÕES</h1>
 - Models: arquivos da estrutura das tabelas
@@ -15,7 +15,7 @@
 - views/layout: arquivos de layout que serão utilizados em todas as páginas
 - views: paginas do projeto 
 
-<br>
+<br><br><br>
 
 <h1>GITHUB</h1>
 <h2>SUBINDO SUAS ALTERAÇÕES PARA O GITHUB</h1>
@@ -27,19 +27,21 @@ PRIMEIRA VEZ (quando ainda não existir a sua branch):
 - git push -u origin <seu_nome>
 - pull request pelo site do Github da sua branch para a branch de homologação
 
+<br>
+
 <h2>OUTRAS VEZES</h2>
 - git add *
 - git commit -m "<seu_comentario>"
 - git push
 - pull request pelo site do Github da sua branch para a branch de homologação
 
-<br>
+<br><br><br>
 
 <h1>PUXANDO AS ALTERAÇÕES DA BRANCH DE HOMOLOGAÇÃO</h1>
 Caso o projeto já exista na sua máquina e outra pessoa tiver feito alterações antes de você, execute:
 - git pull https://github.com/vek03/aula-handlebar-nodejs homologacao
 
-<br>
+<br><br><br>
 
 <h1>DOCUMENTAÇÃO:</h1>
 - npm i express --save
