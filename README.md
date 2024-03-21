@@ -1,5 +1,5 @@
-Iniciando projeto:
-(SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
+<h1>INICIANDO PROJETO</h1>
+<h3>(SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)</h3>
 - git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
 - cd <projeto>
 - npm i
@@ -8,7 +8,7 @@ Iniciando projeto:
 
 <br>
 
-EXPLICAÇÕES:
+<h1>EXPLICAÇÕES</h1>
 - Models: arquivos da estrutura das tabelas
 - Server: arquivo de conexão ao banco
 - app.js: inicialização das bibliotecas, rotas e operações
@@ -17,8 +17,8 @@ EXPLICAÇÕES:
 
 <br>
 
-GITHUB:
-<h1>SUBINDO SUAS ALTERAÇÕES PARA O GITHUB</h1>
+<h1>GITHUB</h1>
+<h2>SUBINDO SUAS ALTERAÇÕES PARA O GITHUB</h1>
 PRIMEIRA VEZ (quando ainda não existir a sua branch):
 - git branch <seu_nome>
 - git checkout <seu_nome>
@@ -27,7 +27,7 @@ PRIMEIRA VEZ (quando ainda não existir a sua branch):
 - git push -u origin <seu_nome>
 - pull request pelo site do Github da sua branch para a branch de homologação
 
-OUTRAS VEZES:
+<h2>OUTRAS VEZES</h2>
 - git add *
 - git commit -m "<seu_comentario>"
 - git push
@@ -41,7 +41,7 @@ Caso o projeto já exista na sua máquina e outra pessoa tiver feito alteraçõe
 
 <br>
 
-DOCUMENTAÇÃO:
+<h1>DOCUMENTAÇÃO:</h1>
 - npm i express --save
 - npm i express-handlebars --save
 - npm i sequelize --save
