@@ -13,7 +13,7 @@ O projeto ainda está em desenvolvimento:
 # INICIANDO PROJETO</h1>
 ### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
 ```
-git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
+git clone https://github.com/vek03/CRUD-nodejs-handlebar.git homologacao
 cd <projeto>
 npm i
 npm run start
@@ -58,7 +58,7 @@ git push
 # PUXANDO AS ALTERAÇÕES DA BRANCH DE HOMOLOGAÇÃO
 Caso o projeto já exista na sua máquina e outra pessoa tiver feito alterações antes de você, execute:
 ```
-git pull https://github.com/vek03/aula-handlebar-nodejs homologacao
+git pull https://github.com/vek03/CRUD-nodejs-handlebar.git homologacao
 ```
 
 <br><br><br>
