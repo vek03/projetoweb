@@ -1,4 +1,4 @@
-#ETAPAS
+# ETAPAS
 O projeto ainda está em desenvolvimento:
 
 - [x] Estrutura
@@ -8,8 +8,10 @@ O projeto ainda está em desenvolvimento:
 - [ ] Update
 - [ ] Delete
 
-<h1>INICIANDO PROJETO</h1>
-<h3>(SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)</h3>
+> Projeto CRUD de Agendamentos com Node.js e Handlebars
+
+# INICIANDO PROJETO</h1>
+### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
 - git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
 - cd <projeto>
 - npm i
@@ -18,7 +20,7 @@ O projeto ainda está em desenvolvimento:
 
 <br><br>
 
-<h1>EXPLICAÇÕES</h1>
+# EXPLICAÇÕES
 - Models: arquivos da estrutura das tabelas
 - Server: arquivo de conexão ao banco
 - app.js: inicialização das bibliotecas, rotas e operações
@@ -27,8 +29,8 @@ O projeto ainda está em desenvolvimento:
 
 <br><br><br>
 
-<h1>GITHUB</h1>
-<h2>SUBINDO SUAS ALTERAÇÕES PARA O GITHUB</h1>
+# GITHUB
+## SUBINDO SUAS ALTERAÇÕES PARA O GITHUB
 PRIMEIRA VEZ (quando ainda não existir a sua branch):
 - git branch <seu_nome>
 - git checkout <seu_nome>
@@ -39,7 +41,7 @@ PRIMEIRA VEZ (quando ainda não existir a sua branch):
 
 <br>
 
-<h2>OUTRAS VEZES</h2>
+## OUTRAS VEZES
 - git add *
 - git commit -m "<seu_comentario>"
 - git push
@@ -47,13 +49,13 @@ PRIMEIRA VEZ (quando ainda não existir a sua branch):
 
 <br><br><br>
 
-<h1>PUXANDO AS ALTERAÇÕES DA BRANCH DE HOMOLOGAÇÃO</h1>
+# PUXANDO AS ALTERAÇÕES DA BRANCH DE HOMOLOGAÇÃO
 Caso o projeto já exista na sua máquina e outra pessoa tiver feito alterações antes de você, execute:
 - git pull https://github.com/vek03/aula-handlebar-nodejs homologacao
 
 <br><br><br>
 
-<h1>DOCUMENTAÇÃO:</h1>
+# DOCUMENTAÇÃO
 - npm i express --save
 - npm i express-handlebars --save
 - npm i sequelize --save
