@@ -30,8 +30,8 @@ O projeto ainda está em desenvolvimento:
 <br><br><br>
 
 # GITHUB
-## SUBINDO SUAS ALTERAÇÕES PARA O GITHUB
-PRIMEIRA VEZ (quando ainda não existir a sua branch):
+> SUBINDO SUAS ALTERAÇÕES PARA O GITHUB
+## PRIMEIRA VEZ (quando ainda não existir a sua branch):
 - git branch <seu_nome>
 - git checkout <seu_nome>
 - git add *
