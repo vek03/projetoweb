@@ -17,8 +17,8 @@ git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
 cd <projeto>
 npm i
 npm run start
-htttp://localhost:8081
 ```
+- htttp://localhost:8081
 
 <br><br>
 
@@ -40,8 +40,8 @@ git checkout <seu_nome>
 git add *
 git commit -m "<seu_comentario>"
 git push -u origin <seu_nome>
-pull request pelo site do Github da sua branch para a branch de homologação
 ```
+- pull request pelo site do Github da sua branch para a branch de homologação
 
 <br>
 
@@ -50,8 +50,8 @@ pull request pelo site do Github da sua branch para a branch de homologação
 git add *
 git commit -m "<seu_comentario>"
 git push
-pull request pelo site do Github da sua branch para a branch de homologação
 ```
+- pull request pelo site do Github da sua branch para a branch de homologação
 
 <br><br>
 
