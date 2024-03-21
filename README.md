@@ -1,6 +1,6 @@
 Iniciando projeto:
 
-- git clone https://github.com/vek03/aula-handlebar-nodejs master
+- git clone https://github.com/vek03/aula-handlebar-nodejs homologacao
 - cd <projeto>
 - npm i
 - npm run start
