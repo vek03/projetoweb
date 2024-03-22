@@ -1,0 +1,10 @@
+Monocro. Red:
+
+#F5004C - vermelho(++)
+#CA2257 - vermelho(+-) 
+
+#A03557 - vermelho(-+)
+#753B4D - vermelho(-+-)
+
+#4B323A - vermelho(--+)
+#332B2D - vermelho(---)
