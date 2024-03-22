@@ -1,10 +1,36 @@
 body {
     padding-top: 70px;
-    background-color: #f8f9fa;
+    background-color: #332B2D;
 }
 
+.navbar {
+    --primary-color: #CA2257;
+    --text-color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 .footer {
-    background-color: #007af4;
-    color: #ffffff;
+    background-color: #CA2257;
+    color: #fff;
     padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #ccc;
+  }
+
+.red{
+    color: #F5004C;
 }
