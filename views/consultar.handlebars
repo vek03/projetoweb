@@ -1,62 +1,12 @@
-<form method="post" action="" id="form" name="form" >
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputEmail4" class="form-label">Primeiro Nome*</label>
-        <input autofocus type="text" placeholder="ex: Alex" class="form-control" name="txtNome" required id="txtNome">
-    </div>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email*</label>
-        <input type="email" placeholder="example@gmail.com" class="form-control" name="txtEmail" required id="txtEmail">
-    </div>
-    
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputSenha4" class="form-label">Senha*</label> <div style="display:inline-block; float:right;"><label for="inputSenha4" class="form-label test">Exibir senha</label>  <input name="checkbox" id="checkbox" style="margin:0 12px 0 0; vertical-align: middle; position: relative; top: -1px;" class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input"></div>
-        <input type="password" minlength="6" maxlength="14" placeholder="De 6 a 14 digitos" class="form-control" name="txtSenha" required id="txtSenha">
-    </div>
-        <!-- Aqui iremos utilizar JS para exibir senha ou não -->
-        <script>
-            const selecionado = document.querySelector("#checkbox");
-            var tipo = document.getElementById("txtSenha");
-
-            selecionado.addEventListener("change", (el) => {
-            if (selecionado.checked) {
-                tipo.type = "text";
-            }else{
-                tipo.type = "password";
-            }
-            });
-
-            selecionado.dispatchEvent(new Event("change"));
-        </script>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputCep4" class="form-label">CEP*</label>
-        <input type="text" maxlength="9" class="form-control" name="txtCep" required id="txtCep" placeholder="13483-000">
-    </div>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputBairro4" class="form-label">Bairro</label>
-        <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="txtBairro" required id="txtBairro">
-    </div>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputEndereco4" class="form-label">Endereço</label>
-        <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="txtEndereco" required id="txtEndereco">
-    </div>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputCidade4" class="form-label">Cidade</label>
-        <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="txtCidade" required id="txtCidade">
-    </div>
-
-    <div style="text-align: left;" class="col-md-6">
-        <label for="inputState" class="form-label">Estado</label>
-        <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="txtEstado" required id="txtEstado">
-    </div>
-
-    <p style="text-align: left; font-weight: bold">Os campos marcados com * são obrigatórios, os demais são de preenchimento automático</p>
-
-    <div style="text-align: left;" class="col-12">
-        <button type="submit" id="btnCadastrar" class="btn btn-dark">Cadastrar</button>
-    </div>
-</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Bairro</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
