@@ -229,3 +229,22 @@ footer{
     justify-content: center;
     align-items: center;
   }
+
+  .card-title {
+    color: #ffffff;
+    text-decoration: double;
+  }
+
+  .card {
+    background-color: #332B2D;
+  }
+
+  .titulo {
+    color: #fff;
+    
+  }
+
+  .titulo-h4 {
+    color: #cfcfcf;
+  }
+
