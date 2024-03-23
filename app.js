@@ -28,6 +28,11 @@ app.get("/", function(req, res){
     res.render("index")
 })
 
+//Pagina inicial
+app.get("/inicial", function(req, res){
+    res.render("inicial")
+})
+
 app.post("/cadastrar", async (req, res) => {
     Agendamento.create(req.body)
 
@@ -47,12 +52,13 @@ app.get("/consultar", async function(req, res){
 })
 
 
+
 //EDITAR
 app.get("/editar/:id", async function(req, res){
     try {
         const agendamentos = await Agendamento.findByPk(req.params.id)
 
-        res.render("consultar")
+        res.render("editar")
     }catch(error){
         res.status(400).json({ error: error.message });
     }
