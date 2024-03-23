@@ -9,11 +9,13 @@
         </tr>
     </thead>
     <tbody>
+        {{#each agendamentos}}
         <tr>
-            <td>1</td>
-            <td>João Silva</td>
-            <td>Centro</td>
-            <td>São Paulo</td>
+            
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.bairro}}</td>
+            <td>{{this.estado}}</td>
             <td>
                 <!-- botao que leva para a pagina de editar -->
                 <a href="/editar/1" class="btn btn-primary col-4">Editar</a>
@@ -45,6 +47,8 @@
 
                 {{!-- esse é o botao antigo de excluir <a href="/deletar/1" class="btn btn-danger col-4">Excluir</a>  --}}
             </td>
+            
         </tr>
+        {{/each}}
     </tbody>
 </table>
