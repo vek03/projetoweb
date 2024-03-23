@@ -1,5 +1,7 @@
 const express = require("express")
 const bodyParser = require('body-parser')
+const {allowInsecurePrototypeAccess,} = require("@handlebars/allow-prototype-access");
+const Handlebars = require("handlebars");
 var Agendamento = require(__dirname + '/models/Agendamento.js')
 const handlebars = require("express-handlebars").engine
 
@@ -18,19 +20,25 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 
 //Definindo layout das páginas
-app.engine("handlebars", handlebars({defaultLayout: "main"}))
+app.engine(
+  "handlebars",
+  handlebars({
+    defaultLayout: "main",
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+  })
+);
 app.set("view engine", "handlebars")
 
 
 //ROTAS
 //INDEX
 app.get("/", function(req, res){
-    res.render("index")
+    res.render("inicial")
 })
 
 //Pagina inicial
-app.get("/inicial", function(req, res){
-    res.render("inicial")
+app.get("/cadastrar", function(req, res){
+    res.render("index")
 })
 
 app.post("/cadastrar", async (req, res) => {
@@ -43,10 +51,13 @@ app.post("/cadastrar", async (req, res) => {
 //CONSULTAR
 app.get("/consultar", async function(req, res){
     try {
-        const agendamentos = await Agendamento.findAll()
-
-        res.render("consultar")
-    }catch(error){
+        const agendamentos = await Agendamento.findAll();
+        console.log(
+            agendamentos.every((agendamento) => agendamento instanceof Agendamento)
+        );
+        console.log("All users:", JSON.stringify(agendamentos, null, 2));
+        res.render("consultar", { agendamentos: agendamentos });
+    } catch (error) {
         res.status(400).json({ error: error.message });
     }
 })
@@ -56,9 +67,10 @@ app.get("/consultar", async function(req, res){
 //EDITAR
 app.get("/editar/:id", async function(req, res){
     try {
-        const agendamentos = await Agendamento.findByPk(req.params.id)
-
-        res.render("editar")
+        const agendamento = await Agendamento.findByPk(req.params.id)
+        console.log(agendamento instanceof Agendamento);
+        console.log("Got agendamento:", JSON.stringify(agendamento, null, 2));
+        res.render("editar", { agendamento: agendamento });
     }catch(error){
         res.status(400).json({ error: error.message });
     }
@@ -69,9 +81,24 @@ app.post("/editar/:id", async function(req, res){
     try {
         const agendamento = await Agendamento.findByPk(req.params.id)
 
-        agendamento.update(req.body)
+        agendamento.update(
+          { 
+            nome: req.body.nome,
+            email: req.body.email,
+            endereco: req.body.endereco,
+            bairro: req.body.bairro,
+            cep: req.body.cep,
+            cidade: req.body.cidade,
+            estado: req.body.estado
+         },
+          {
+            where: {
+              id: agendamento.id,
+            },
+          }
+        );
 
-        res.render("consultar")
+        res.redirect("/consultar");
     }catch(error){
         res.status(400).json({ error: error.message });
     }

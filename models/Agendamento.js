@@ -5,6 +5,9 @@ const Agendamento = sequelize.define('agendamentos',{
     nome:{
         type: Sequelize.STRING
     },
+    email:{
+        type: Sequelize.STRING
+    },
     endereco:{
         type: Sequelize.STRING
     },
