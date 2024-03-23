@@ -2,8 +2,8 @@
 O projeto ainda está em desenvolvimento:
 
 - [x] Estrutura
-- [ ] Front-End
-- [ ] Create
+- [x] Front-End
+- [x] Create
 - [ ] Read
 - [ ] Update
 - [ ] Delete
