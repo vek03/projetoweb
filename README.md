@@ -4,8 +4,8 @@ O projeto ainda está em desenvolvimento:
 - [x] Estrutura
 - [x] Front-End
 - [x] Create
-- [ ] Read
-- [ ] Update
+- [x] Read
+- [x] Update
 - [ ] Delete
 
 > Projeto CRUD de Agendamentos com Node.js e Handlebars
