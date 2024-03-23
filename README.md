@@ -2,18 +2,19 @@
 O projeto ainda está em desenvolvimento:
 
 - [x] Estrutura
-- [ ] Front-End
-- [ ] Create
-- [ ] Read
-- [ ] Update
+- [x] Front-End
+- [x] Create
+- [x] Read
+- [x] Update
 - [ ] Delete
 
 > Projeto CRUD de Agendamentos com Node.js e Handlebars
 
 # INICIANDO PROJETO</h1>
 ### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
+- Crie uma base de dados MySQL chamada "agendamentos_bd"
 ```
-git clone https://github.com/vek03/CRUD-nodejs-handlebar.git homologacao
+git clone -b homologacao https://github.com/vek03/CRUD-nodejs-handlebar.git
 cd <projeto>
 npm i
 npm run start
@@ -71,6 +72,7 @@ npm i sequelize --save
 npm i mysql2 --save
 npm i nodemon --save-dev
 npm i body-parser --save
+npm i @handlebars/allow-prototype-access --save
 ```
 
 - Front-End: https://handlebarsjs.com/guide/
