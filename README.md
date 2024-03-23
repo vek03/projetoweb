@@ -12,6 +12,7 @@ O projeto ainda está em desenvolvimento:
 
 # INICIANDO PROJETO</h1>
 ### (SEMPRE CLONE DA BRANCH DE HOMOLOGAÇÃO)
+- Crie uma base de dados MySQL chamada "agendamentos_bd"
 ```
 git clone https://github.com/vek03/CRUD-nodejs-handlebar.git homologacao
 cd <projeto>
