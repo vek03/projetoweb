@@ -33,23 +33,25 @@ app.set("view engine", "handlebars")
 //ROTAS
 //INDEX
 app.get("/", function(req, res){
-    res.render("inicial")
-})
-
-//Pagina inicial
-app.get("/cadastrar", function(req, res){
     res.render("index")
 })
 
+
+//Página de Cadastrar
+app.get("/cadastrar", (req, res) => {
+    res.render("cadastrar")
+})
+
+//
 app.post("/cadastrar", async (req, res) => {
-    Agendamento.create(req.body)
+    await Agendamento.create(req.body)
 
     res.redirect('/consultar');
 })
 
 
 //CONSULTAR
-app.get("/consultar", async function(req, res){
+app.get("/consultar", async (req, res) => {
     try {
         const agendamentos = await Agendamento.findAll();
         console.log(
@@ -65,7 +67,7 @@ app.get("/consultar", async function(req, res){
 
 
 //EDITAR
-app.get("/editar/:id", async function(req, res){
+app.get("/editar/:id", async (req, res) => {
     try {
         const agendamento = await Agendamento.findByPk(req.params.id)
         console.log(agendamento instanceof Agendamento);
@@ -77,11 +79,11 @@ app.get("/editar/:id", async function(req, res){
 })
 
 //ATUALIZAR
-app.post("/editar/:id", async function(req, res){
+app.post("/editar/:id", async (req, res) => {
     try {
         const agendamento = await Agendamento.findByPk(req.params.id)
 
-        agendamento.update(
+        await agendamento.update(
           { 
             nome: req.body.nome,
             email: req.body.email,
@@ -109,13 +111,11 @@ app.post("/editar/:id", async function(req, res){
 app.post("/deletar/:id", async (req, res) => {
     const agendamento = await Agendamento.findByPk(req.params.id);
 
-    if(!agendamento){
-        res.send('<h1>Agendamento Não Encontrado!</h1> <br><br> <a href="/">Home</a>')
-    }else{
-        res.send('<h1>Agendamento Excluído!</h1> <br><br> <a href="/">Home</a>')
+    if(agendamento){
+        await agendamento.destroy();
     }
 
-    agendamento.destroy();
+    res.redirect("/consultar");
 })
 
 

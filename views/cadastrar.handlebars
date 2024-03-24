@@ -1,0 +1,68 @@
+
+<p style="text-align: left; font-weight: bold">Os campos marcados com <span class="red">*</span> são obrigatórios, os demais são de preenchimento automático</p>
+
+<form method="post" action="/cadastrar" id="form" name="form" >
+
+
+    <div style="padding-top: 1%;" class="row">
+        <div style="text-align: left" class="col-sm-6  col-xs-12">
+            <label for="inputEmail4" class="form-label">Primeiro Nome<span class="red">*</span></label>
+            <input autofocus type="text" placeholder="ex: Alex" class="form-control" name="nome" required id="nome">
+        </div>
+
+        <div style="text-align: left;" class="col-sm-6  col-xs-12">
+            <label for="inputEmail4" class="form-label">Email<span class="red">*</span></label>
+            <input type="email" placeholder="example@gmail.com" class="form-control" name="email" required id="email">
+        </div>
+    </div>
+
+
+    <div style="padding-top: 1%;" class="row">
+        <div style="text-align: left;" class="col-sm-6  col-xs-12">
+            <label for="inputCep4" class="form-label">CEP<span class="red">*</span></label>
+            <input type="text" maxlength="9" class="form-control" name="cep" required id="cep" placeholder="13483-000">
+        </div>
+
+        <div style="text-align: left;" class="col-sm-6  col-xs-12">
+            <label for="inputBairro4" class="form-label">Bairro</label>
+            <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="bairro" required id="bairro">
+        </div>
+    </div>
+
+
+    <div style="padding-top: 1%;" class="row">
+            <div style="text-align: left;" class="col-sm-6 col-xs-12">
+                <label for="inputEndereco4" class="form-label">Endereço</label>
+                <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="endereco" required id="endereco">
+            </div>
+
+            <div style="text-align: left;" class="col-sm-6 col-xs-12">
+                <label for="inputCidade4" class="form-label">Cidade</label>
+                <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="cidade" required id="cidade">
+            </div>
+    </div>
+        
+        
+    <div style="padding-top: 1%;" class="row">
+        <div class="col">
+        </div>
+        <div style="text-align: left;" class="col-sm-5 col-xs-12">
+            <label for="inputState" class="form-label">Estado</label>
+            <input type="text" placeholder="Preenchimento automático" readonly class="form-control" name="estado" required id="estado">
+        </div>
+        <div class="col">
+        </div>
+    </div>
+
+            <div class="text-center mt-auto py-3">
+                        
+                <button type="submit" id="btnCadastrar" class="btn btn-dark btn-cherry">
+                        Cadastrar
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        <span class="span"></span>
+                        </button>
+            </div>
+        
+</form>
