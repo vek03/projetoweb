@@ -18,15 +18,15 @@
             <td>{{this.estado}}</td>
             <td>
                 <!-- botao que leva para a pagina de editar -->
-                <a href="/editar/1" class="btn btn-primary col-4">Editar</a>
+                <a href="/editar/{{this.id}}" class="btn btn-primary col-4">Editar</a>
 
-                <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Excluir
+                <button type="button" class="btn btn-danger col-4" data-bs-toggle="modal" data-bs-target="#exampleModal{{this.id}}">
+                    Excluir
                 </button>
 
 
                 <!-- Modal -->
-                <div class="modal fade -dialog-centered" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade -dialog-centered" id="exampleModal{{this.id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -37,15 +37,14 @@
                         Tenha certeza de que esta conta é a que você deseja excluir, pois após a exclusão o cadastro será perdido para sempre!
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Excluir</button>
+                        <form method="post" action="/deletar/{{this.id}}">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
                     </div>
                     </div>
                 </div>
                 </div>
-
-
-                {{!-- esse é o botao antigo de excluir <a href="/deletar/1" class="btn btn-danger col-4">Excluir</a>  --}}
             </td>
             
         </tr>
