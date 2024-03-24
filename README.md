@@ -6,7 +6,7 @@ O projeto ainda está em desenvolvimento:
 - [x] Create
 - [x] Read
 - [x] Update
-- [ ] Delete
+- [x] Delete
 
 > Projeto CRUD de Agendamentos com Node.js e Handlebars
 
