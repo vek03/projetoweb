@@ -1,10 +1,262 @@
+/* CSS geral */
+
+/* Define a cor de fundo para o body */
 body {
-    padding-top: 70px;
-    background-color: #f8f9fa;
+  background-color: #332B2D;
 }
 
-.footer {
-    background-color: #007af4;
-    color: #ffffff;
-    padding: 20px 0;
+/* Estilos para o conteúdo do body */
+.body {
+  padding-top: 3%;
+  padding-block-end: 3%;
+}
+
+/* Estilos para as labels */
+label {
+  color: #fff;
+}
+
+/* Estilos para elementos com a classe .red */
+.red {
+  color: #F5004C;
+}
+
+/* Estilos para parágrafos */
+p {
+  color: #fff;
+}
+
+/* Estilos para o título de um card */
+.card-title {
+  color: #ffffff;
+  text-decoration: double;
+}
+
+/* Estilos para o card */
+.card {
+  background-color: #332B2D;
+}
+
+/* Estilos para títulos */
+.titulo {
+  color: #fff;
+}
+
+/* Estilos para subtítulos */
+.titulo-h4 {
+  color: #cfcfcf;
+}
+
+
+/* Botões da página */
+
+/* Estilos para botões com a classe .btn-cherry */
+.btn-cherry {
+  background-color: #753B4D;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cherry:hover {
+  background-color: #F5004C;
+}
+
+.btn-cherry:before {
+  content: '';
+  position: relative;
+}
+
+/* Efeitos para o hover do botão */
+.span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ffffff, #F5004C);
+  animation: animate1 2s linear infinite;
+}
+
+/* Animação para o efeito de transição no hover */
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Estilos para o hover do botão (parte 2) */
+.span:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff, #F5004C);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+/* Animação para o efeito de transição no hover (parte 2) */
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Estilos para o hover do botão (parte 3) */
+.span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, #ffffff, #F5004C);
+  animation: animate3 2s linear infinite;
+}
+
+/* Animação para o efeito de transição no hover (parte 3) */
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Estilos para o hover do botão (parte 4) */
+.span:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, #ffffff, #F5004C);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+/* Animação para o efeito de transição no hover (parte 4) */
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Estilos para ícones de mídias sociais */
+.sm a {
+  display: inline-block;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 0 16px;
+  transition: .4s linear;
+  position: relative;
+}
+
+/* Efeitos de hover para os ícones de mídias sociais */
+.sm a::before,
+.sm a::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: .4s linear;
+}
+
+.sm a:hover {
+  color: #ffcddd;
+  transform: scale(.9);
+}
+
+.sm a:hover::before {
+  border-left: 3px solid;
+  border-right: 3px solid;
+  transform: skewX(20deg);
+}
+
+.sm a:hover::after {
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  transform: skewy(-10deg);
+}
+
+/* Estilos para formulários */
+
+/* Estilos para inputs de formulário em foco */
+.form-control:focus {
+  color: #000;
+  background-color: var(--bs-body-bg);
+  border-color: #000;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(245, 0, 78, 0.96);
+}
+
+/* Navbar da página */
+nav {
+  --primary-color: #CA2257;
+  --text-color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  width: 100%;
+  padding: 10px;
+}
+
+/* Efeitos de hover para links na navbar */
+.navbar a:hover {
+  text-decoration: bold;
+  color: rgb(255, 255, 255);
+}
+
+/* Estilos para o botão do toggler na navbar */
+.navbar-toggler {
+  border: transparent;
+}
+
+/* Estilos para o foco do botão do toggler na navbar */
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: transparent var(--bs-navbar-toggler-focus-width);
+}
+
+/* Footer da página */
+footer {
+  background-color: #CA2257;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Correção de bug para ícones em botões */
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 230%;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
