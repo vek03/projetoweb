@@ -1,3 +1,4 @@
+//IMPORTANDO BIBLIOTECAS
 const express = require("express")
 const bodyParser = require('body-parser')
 const {allowInsecurePrototypeAccess,} = require("@handlebars/allow-prototype-access");
@@ -12,12 +13,10 @@ const app = express()
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
 //Definindo rota dos arquivos complementares
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.use('/public', express.static('public'))
 app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
-
 
 //Definindo layout das páginas
 app.engine(
@@ -30,11 +29,13 @@ app.engine(
 app.set("view engine", "handlebars")
 
 
+
 //ROTAS
 //INDEX
-app.get("/", function(req, res){
+app.get("/", (req, res) => {
     res.render("index")
 })
+
 
 
 //Página de Cadastrar
@@ -42,7 +43,7 @@ app.get("/cadastrar", (req, res) => {
     res.render("cadastrar")
 })
 
-//
+//CREATE
 app.post("/cadastrar", async (req, res) => {
     await Agendamento.create(req.body)
 
@@ -50,13 +51,16 @@ app.post("/cadastrar", async (req, res) => {
 })
 
 
-//CONSULTAR
+
+//READ
 app.get("/consultar", async (req, res) => {
     try {
         const agendamentos = await Agendamento.findAll();
+
         console.log(
             agendamentos.every((agendamento) => agendamento instanceof Agendamento)
         );
+
         console.log("All users:", JSON.stringify(agendamentos, null, 2));
         res.render("consultar", { agendamentos: agendamentos });
     } catch (error) {
@@ -70,41 +74,52 @@ app.get("/consultar", async (req, res) => {
 app.get("/editar/:id", async (req, res) => {
     try {
         const agendamento = await Agendamento.findByPk(req.params.id)
-        console.log(agendamento instanceof Agendamento);
-        console.log("Got agendamento:", JSON.stringify(agendamento, null, 2));
-        res.render("editar", { agendamento: agendamento });
+
+        if(!agendamento)
+        {
+            res.redirect("/consultar");
+        }else
+        {
+            console.log(agendamento instanceof Agendamento);
+            console.log("Got agendamento:", JSON.stringify(agendamento, null, 2));
+            res.render("editar", { agendamento: agendamento });
+        }
     }catch(error){
         res.status(400).json({ error: error.message });
     }
 })
 
-//ATUALIZAR
+//UPDATE
 app.post("/editar/:id", async (req, res) => {
     try {
         const agendamento = await Agendamento.findByPk(req.params.id)
 
-        await agendamento.update(
-          { 
-            nome: req.body.nome,
-            email: req.body.email,
-            endereco: req.body.endereco,
-            bairro: req.body.bairro,
-            cep: req.body.cep,
-            cidade: req.body.cidade,
-            estado: req.body.estado
-         },
-          {
-            where: {
-              id: agendamento.id,
-            },
-          }
-        );
-
+        if(agendamento)
+        {
+            await agendamento.update(
+                { 
+                  nome: req.body.nome,
+                  email: req.body.email,
+                  endereco: req.body.endereco,
+                  bairro: req.body.bairro,
+                  cep: req.body.cep,
+                  cidade: req.body.cidade,
+                  estado: req.body.estado
+               },
+                {
+                  where: {
+                    id: agendamento.id,
+                  },
+                }
+              ); 
+        }
+        
         res.redirect("/consultar");
     }catch(error){
         res.status(400).json({ error: error.message });
     }
 })
+
 
 
 //DELETE
