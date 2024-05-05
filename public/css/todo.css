@@ -1,0 +1,115 @@
+body{
+    background-color: #f8f7f2;
+}
+
+.navbar{
+    color: #FFFFF1;
+    background-color: #094067;
+}
+
+.spn{
+    font-size: 20px;
+}
+
+
+.btnplus{
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    color: aliceblue;
+    background-color: #094067;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar.a{
+    color: #FFFFF1;
+}
+
+.task-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #94A1B2;
+    color: white;
+}
+
+.task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-details {
+    flex: 1;
+}
+
+.task-buttons {
+    margin-left: 10px;
+}
+
+.modal-body {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.btnconcluir{
+    background-color: #094067;
+    border-radius: 15px;
+    z-index: 9;
+}
+
+.btnview{
+    background-color: #106aaa;
+    border-radius: 15px;
+    z-index: 9;
+}
+
+.btn{
+    border: none;
+}
+
+.calendar .btn-primary{
+    background-color: #094067;
+}
+
+.calendar{
+    margin-top: 50px;
+}
+
+.task-buttons a{
+    color:inherit;
+    text-decoration: none;
+}
+
+.modal-body p{
+    font-size: 26px;
+}
+
+@media (max-width: 768px) {
+    .calendar {
+        display: none;
+    }
+}

@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="/public/css/view.css">
+</head>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <a href="/todo" class="navbar-brand a">ToDo List</a>
+    <a onclick="sair()" class="navbar-brand a">Sair</a>
+  </div>
+</nav>
+
+{{#each task}}
+{{#dataValues}}
+    <div class="task-container">
+        <div class="back-button">
+            <a href="/todo"><ion-icon name="arrow-back-outline"></ion-icon></a>
+        </div>
+        <div class="task-details">
+            <div class="row">
+                <div class="col">
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="edit-button">
+                    <a href="/edit/{{id}}" style="color:inherit">
+                        <button type="button" class="btn btn-primary">
+                            Editar
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <p>Vencimento: {{due}}</p>
+            <p>Matéria: {{class}}</p>
+            <p>Situação: {{status}}</p>
+            <p>Descrição: {{description}}</p>
+        </div>
+    </div>
+{{/dataValues}}
+{{/each}}

@@ -1,18 +1,52 @@
-$("#cep").blur(function(){
-	var cep = this.value.replace(/[^0-9]/, "");
-	
-	if(cep.length != 8){
-		return false;
-	}
-	
-	var url = "https://viacep.com.br/ws/"+cep+"/json/";
-	
-	$.getJSON(url, function(dadosRetorno){
-		try{
-			$("#endereco").val(dadosRetorno.logradouro);
-			$("#bairro").val(dadosRetorno.bairro);
-			$("#cidade").val(dadosRetorno.localidade);
-			$("#estado").val(dadosRetorno.uf);
-		}catch(ex){}
-	});
-});
+function checkError() {
+    fetch('/getError')
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: data.error,
+                });
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function checkSuccess() {
+    fetch('/getSuccess')
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Sucesso!',
+                    text: data.success,
+                });
+            }
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function checkMessages(){
+    checkError();
+    checkSuccess();
+}
+
+function sair(){
+    Swal.fire({
+        title: 'Deseja realmente sair?',
+        showDenyButton: true,
+        confirmButtonText: `Sim`,
+        denyButtonText: `Não`,
+        icon: 'info'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "/logout";
+        }
+      })
+
+}
+
+// Chamada à função quando a página carrega
+window.onload = checkMessages;

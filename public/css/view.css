@@ -1,0 +1,95 @@
+body{
+    background-color: #f8f7f2;
+}
+
+.navbar{
+    color: #FFFFF1;
+    background-color: #094067;
+}
+
+.task-container {
+    display: flex;
+    justify-content: center; 
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 10vh auto 0px auto;
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+.task-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.task-details h2 {
+    margin-top: 0;
+}
+
+.task-details p {
+    margin: 10px 0;
+}
+
+.edit-button {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+
+
+.edit-button button {
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.back-button{
+    position: relative;
+    top: 25px;
+}
+
+.back-button a{
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+.btn {
+    background-color: #094067;
+    border: none;
+    border-radius: 15px;
+}
+
+.task-details{
+
+    text-align: justify;
+}
+
+
+@media screen and (min-width: 768px) {
+    .task-container {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .task-container {
+        width: 90%;
+    }
+
+    .task-details {
+        padding: 10px;
+    }
+
+    .edit-button button {
+        padding: 8px 16px;
+    }
+}

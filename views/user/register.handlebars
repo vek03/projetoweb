@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="/public/css/cadastro.css">
+</head>
+
+<form class="form" action="/register" method="POST">
+    <div class="main-login">
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Cadastro</h1>
+                <div class="cadastro-text">
+                    <span class="registro-texto">Ja tem uma conta Cadastrada? </span><a href="/">Faça Login</a>
+                </div>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" required name="username" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" required name="password" placeholder="Senha">
+                </div>
+                <button type="submit" class="btn-login">Cadastrar-se</button>
+            </div>
+        </div>
+        <div class="left-login">
+            <h1>Cadastre-se para ter acesso ao sistema!</h1>
+            <img src="/public/img/Menina2.png" class="left-login-image" alt="ocean">
+        </div>
+    </div>
+</form>

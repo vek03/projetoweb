@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="/public/css/edit.css">
+</head>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <a href="/todo" class="navbar-brand a">ToDo List</a>
+    <a onclick="sair()" class="navbar-brand a">Sair</a>
+  </div>
+</nav>
+
+<div class="header-container">
+    <h1 class="tarefa">Edite sua Tarefa</h1>
+    <h2 class="info">Informações da Tarefa</h2>
+</div>
+
+ 
+<div class="container">
+    <div class="content">
+        {{#each task}}
+        {{#dataValues}}
+            <form method="post" action="/atualizar">
+
+                <div class="row">
+                    <div class="col">
+                        <input type="hidden" name="id" class="form-control" id="nome" value="{{id}}">
+                        <label for="nomeCompleto" class="form-label">Nome da Tarefa</label>
+                        <input type="text" class="form-control" name="nomeTarefa" id="nomeTarefa" placeholder="Nome Completo" aria-label="Nome Completo" value="{{title}}">
+                    </div>
+                    <div class="col">
+                        <label for="dataConclusao" class="form-label">Data de Conclusão Prevista</label>
+                        <input type="date" class="form-control" name="dataConclusao" id="dataConclusao" aria-label="Data de Conclusão Prevista" value="{{due}}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="Materia" class="form-label">Materia</label>
+                        <input type="text" class="form-control" name="nomeMateria" id="nomeMateria" placeholder="Nome da Materia" aria-label="Nome da Materia" value="{{class}}">
+                    </div>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="descricao" class="form-label">Descrição</label>
+                    <textarea class="form-control" name="descricao" id="descricao" rows="3">{{description}}</textarea>
+                </div>
+
+                <div class="botoes">
+                    <button type="submit" class="btn btn-primary btn-lg">Editar</button>
+                    <button type="button" class="btn btn-primary btn-lg"  onclick="window.location.href='/todo'">Cancelar</button>
+                </div>
+
+            </form>
+        {{/dataValues}}
+        {{/each}}
+    </div>
+</div>

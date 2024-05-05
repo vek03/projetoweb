@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" href="/public/css/login.css">
+</head>
+
+<form class="form" action="/login" method="POST">
+    <div class="main-login">
+        <div class="left-login">
+           <h1>Faça login para visualizar suas </br>atividades agendadas</h1>
+            <img src="/public/img/Menina1.png" class="left-login-image" alt="ocean">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Login</h1>
+                <div class="cadastro-text">
+                    <span class="registro-texto">Ainda não é cadastrado? </span><a href="/register">Cadastre-se</a>
+                </div>
+                <div class="textfield">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" name="username" placeholder="Usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="password" placeholder="Senha">
+                </div>
+                <button type="submit" class="btn-login">Login</button>
+            </div>
+        </div>
+    </div>
+</form>

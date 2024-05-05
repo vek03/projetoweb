@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize(
-    'agendamentos_bd',
+    'todo_bd',
     'root',
     '',
     {

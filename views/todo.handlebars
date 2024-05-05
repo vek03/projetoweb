@@ -1,0 +1,101 @@
+<head>
+  <link rel="stylesheet" href="/public/css/todo.css">
+
+  <script>
+  var alltasks = {{{alltasksJson}}};
+  </script>
+  
+  <script src="/fullcalendar/index.global.js"></script>
+  <script src="/@fullcalendar/bootstrap5/index.global.js"></script>
+  <script src="/@fullcalendar/core/locales/pt-br.global.js"></script>
+  <script src="/public/js/calendar.js"></script>
+</head>
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <a href="/todo" class="navbar-brand a">ToDo List</a>
+    <a onclick="sair()" class="navbar-brand a">Sair</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="header-container">
+    <h1>Minhas Tarefas</h1>
+    <button type="button" class="btn btn-primary btnplus" data-bs-toggle="modal"
+      data-bs-target="#editarModal"
+      onclick="window.location.href='./create'">
+      <span class="spn">+</span>
+    </button>
+  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pendents-tab" data-bs-toggle="tab" data-bs-target="#pendents" type="button" role="tab" aria-controls="pendents" aria-selected="true">Pendentes</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="completes-tab" data-bs-toggle="tab" data-bs-target="#completes" type="button" role="tab" aria-controls="completes" aria-selected="false">Concluídas</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="pendents" role="tabpanel" aria-labelledby="pendents-tab">
+      <br>
+      {{#each tasksPendentes}}
+      {{#dataValues}}
+      <div class="task-container">
+        <div class="task-content">
+          <div class="task-details">
+            <div class="fw-bold">{{title}}</div>
+            <p>{{due}}</p>
+          </div>
+          <div class="task-buttons">
+            <a href="/view/{{id}}">
+              <button type="button" class="btn btn-primary btnview">
+                Visualizar
+              </button>
+            </a>
+            <a href="/completar/{{id}}">
+              <button type="button" class="btn btn-primary btnconcluir">
+                Concluir
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{/dataValues}}
+      {{/each}}
+    </div>
+
+    <div class="tab-pane fade" id="completes" role="tabpanel" aria-labelledby="completes-tab">
+      <br>
+      {{#each tasksConcluidos}}
+      {{#dataValues}}
+      <div class="task-container">
+        <div class="task-content">
+          <div class="task-details">
+            <div class="fw-bold">{{title}}</div>
+            <p>Vencimento: {{due}}</p>
+            <p>Conclusão: {{conclusion}}</p>
+          </div>
+          <div class="task-buttons">
+            <a href="/view/{{id}}" style="color:inherit">
+              <button type="button" class="btn btn-primary btnview">
+                Visualizar
+              </button>
+            </a>
+            <a href="/desfazer/{{id}}">
+              <button type="button" class="btn btn-primary btnconcluir">
+                Desfazer
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      {{/dataValues}}
+      {{/each}}
+    </div>
+  </div>
+
+<div class="container">
+  <div class="calendar" id="calendar"></div>
+    
+  </div>
+</div>
