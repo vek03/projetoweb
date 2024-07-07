@@ -1,5 +1,5 @@
 # ETAPAS
-O projeto ainda está em desenvolvimento:
+O projeto está concluído:
 
 - [x] Estrutura
 - [x] Front-End
